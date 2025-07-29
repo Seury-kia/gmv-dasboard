@@ -14,7 +14,7 @@ sheet_url = "https://docs.google.com/spreadsheets/d/1S4nRG-PHLsqqbvwACp_QLfiW073
 
 @st.cache_data
 def load_data_from_gsheet(url):
-    return pd.read_csv(url, parse_dates=["Tanggal"])
+    df = pd.read_csv(url, parse_dates=["Tanggal"])
 
 try:
     df = load_data_from_gsheet(sheet_url)
